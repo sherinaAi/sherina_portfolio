@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sherina Maquema | Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+    header {
+      background: #343a40;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #495057;
+      font-weight: 600;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #343a40;
+      margin-bottom: 1rem;
+    }
+    .project-card, .experience-card, .cert-card {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      transition: transform 0.2s ease-in-out;
+    }
+    .project-card:hover, .experience-card:hover, .cert-card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #343a40;
+      color: #fff;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+    .download-resume {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ddd;
+      margin-top: 1rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.75rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sherina Mae Maquema</h1>
+    <p>Computer Engineering Graduate | Tech Enthusiast | Future Leader</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+    <a href="#resume">Resume</a>
+  </nav>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>I am a recent Computer Engineering graduate (Cum Laude) from the International School of Asia and the Pacific...</p>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-card">
+      <h3>Hidden Camera Detector App</h3>
+      <p>Built using Android Studio to help users detect hidden cameras using infrared and reflection techniques.</p>
+    </div>
+    <div class="project-card">
+      <h3>Wireless Network Analysis</h3>
+      <p>Led a site survey using NetSpot to identify hidden SSIDs, signal interference, and unauthorized devices in the area.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-card">
+      <h3>Intern – Bitstop Network Services</h3>
+      <p>Developed a mobile app, performed testing, debugged camera access issues, and improved performance in various environments.</p>
+    </div>
+    <div class="experience-card">
+      <h3>Field Leader – Network Survey</h3>
+      <p>Conducted wireless network analysis and presented recommendations to improve performance and security.</p>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2 class="section-title">Certifications & Courses</h2>
+    <div class="cert-card">
+      <ul>
+        <li>Introduction to AI with Python – HarvardX</li>
+        <li>Introduction to Cybersecurity Awareness – HP LIFE</li>
+        <li>Machine Learning and AI with Python – HarvardX</li>
+        <li>WebML102 – Google</li>
+        <li>Introduction to Digital Business Skills – HP LIFE</li>
+        <li>NCII: Computer Systems Servicing</li>
+        <li>Civil Service Professional Eligible</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2 class="section-title">My Resume</h2>
+    <div class="download-resume">
+      <a class="btn" href="resume.pdf" download>Download Resume (PDF)</a>
+    </div>
+    <iframe src="resume.pdf" title="Resume PDF Viewer"></iframe>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p><strong>Email:</strong> cpemaquemasherina@gmail.com</p>
+    <p><strong>Mobile:</strong> 0995-255-6266</p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sherina-maquema-29206a140" target="_blank">Sherina Maquema</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Sherina Mae Maquema. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
